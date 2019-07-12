@@ -1,0 +1,4 @@
+name = "F1_demos"
+uuid = "e57895aa-a468-11e9-32de-b59be1ebca8a"
+authors = ["Benoit Pasquier <pasquieb@uci.edu>"]
+version = "0.1.0"
