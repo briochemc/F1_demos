@@ -1,4 +1,7 @@
-# generate examples
+using Pkg
+Pkg.activate()
+Pkg.instantiate()
+
 using Literate
 
 # Directory where the presentations in Literate.jl format are
