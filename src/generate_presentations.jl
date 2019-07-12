@@ -1,6 +1,7 @@
 using Pkg
-Pkg.activate()
+Pkg.activate(".")
 Pkg.instantiate()
+Pkg.status()
 
 using Literate
 
@@ -21,10 +22,9 @@ println("Generating presentations using Literate.jl")
 for presentation in readdir(presentations_DIR)
     println("$presentation")
     input = joinpath(presentations_DIR, presentation)
-    output_DIR = joinpath(generated_presentations_DIR, presentation)
     # Alternate the commented line to avoid executing the notebook
     # when you are editing the text only
     #Literate.notebook(input, output_DIR, execute = true)
-    Literate.notebook(input, output_DIR, execute = false)
+    Literate.notebook(input, generated_presentations_DIR, execute = false)
 end
 
