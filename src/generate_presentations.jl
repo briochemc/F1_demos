@@ -1,14 +1,14 @@
-using Pkg
-Pkg.activate(".")
-Pkg.instantiate()
-Pkg.status()
+#using Pkg
+#Pkg.activate(".")
+#Pkg.instantiate()
+#Pkg.status()
 
 using Literate
 
 # Directory where the presentations in Literate.jl format are
-presentations_DIR = abspath(joinpath(@__DIR__, "presentations"))
+presentations_DIR = abspath(joinpath(@__DIR__, "literate", "presentations"))
 # Directory for generated stuff
-generated_DIR = abspath(joinpath(@__DIR__, "generated"))
+generated_DIR = abspath(joinpath(splitpath(@__DIR__)[1:end-1]..., "generated"))
 # subdirectory for the generated presentations
 generated_presentations_DIR = abspath(joinpath(generated_DIR, "presentations"))
 # Erase previous generated presentations if they exist
